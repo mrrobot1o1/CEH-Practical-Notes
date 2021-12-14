@@ -71,11 +71,11 @@ NetBIOS Enumerator
 ```
 ### >>Enum4Linux Wins Enumeration :
 ```
-enum4linux -u martin -p apple -U 10.10.10.12 -> Users Enumeration
-enum4linux -u martin -p apple -o 10.10.10.12 -> OS Enumeration
-enum4linux -u martin -p apple -P 10.10.10.12 -> Password Policy Information
-enum4linux -u martin -p apple -G 10.10.10.12 -> Groups Information
-enum4linux -u martin -p apple -S 10.10.10.12 -> Share Policy Information (SMB Shares Enumeration)
+enum4linux -u user -p password -U 10.10.10.12 -> Users Enumeration
+enum4linux -u user -p password -o 10.10.10.12 -> OS Enumeration
+enum4linux -u user -p password -P 10.10.10.12 -> Password Policy Information
+enum4linux -u user -p password -G 10.10.10.12 -> Groups Information
+enum4linux -u user -p password -S 10.10.10.12 -> Share Policy Information (SMB Shares Enumeration)
 ```
 ### >>Active Directory LDAP Enumeration : ADExplorer
 
