@@ -74,3 +74,27 @@ nmap -Pn -sS -A -oX test 10.10.10.10/24
 nmap -sV -v --script nbstat.nse 10.10.10.10
 
 snmp-check 10.10.10.10
+
+
+**DNS Recon**
+
+dnsrecon -f example.com -z
+
+
+**RPC Info**
+
+### HackerSploit NetBIOS and SMB Enumration
+
+137 netbios [network basic input and output system]
+
+139,445 smb   [system massege block]
+
+sbtstat -A 10.10.10.10
+
+nbtscan  [alternative on linux]
+
+nbtscan -r -v 10.10.10.10
+
+smbclient -L 10.10.10.10
+
+smbmap -H 10.10.10.10
