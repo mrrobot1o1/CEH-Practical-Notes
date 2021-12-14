@@ -43,7 +43,7 @@ set type=cname
 You can use kloth.net OR yougetsignal.com ad alternative
 
 **recon-ng**
-
+```sh
 > marketplace install all
 > modules search
 > workspaces  create Test
@@ -51,7 +51,7 @@ You can use kloth.net OR yougetsignal.com ad alternative
 > db insert domains
 :example.com
 > modules load brute_hots
-
+```
 **usufy.py**
 
 usufy.py -name mrrobo1o1 -p twitter
